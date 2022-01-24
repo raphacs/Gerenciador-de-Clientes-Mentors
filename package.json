@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1",
+    "simple-crypto-js": "^3.0.1",
+    "simplecrypt": "^0.1.0"
+  }
+}

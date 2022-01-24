@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  projetocadastrocliente:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - "/db_clientes_mentorstec.sqlite"

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <br>
+    <h2 class="ui header">Listagem de Clientes</h2>
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>USER</th>
+        <th>PW</th>
+        <th>ID_CLIENTE</th>
+        <th>OPÇÕES</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{ user.user_name }}</td>
+            <td id="teste">{{ user.pw_cliente }}</td>
+            
+          
+          <td>{{ user.id_cliente }}</td>
+          <td>
+              <a href="edit/{{ user.id }}">Editar</a> |
+              <a href="delete/{{ user.id }}">Excluir</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable({
+        columns: [
+          null,
+          {searchable: false},
+          null],
+      });
+    });
+  </script>
+<script>
+    $("#teste").click(function(){
+        $(this).hide();
+    });
+</script>
+
+
+
+{% endblock %}
