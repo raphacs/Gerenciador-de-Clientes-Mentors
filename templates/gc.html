@@ -7,8 +7,8 @@
   <table id="data" class="table table-striped">
     <thead>
       <tr>
-        <th>USER</th>
-        <th>PW</th>
+        <th>USERNAME</th>
+        <th>PASSWORD</th>
         <th>ID_CLIENTE</th>
         <th>OPÇÕES</th>
       </tr>
@@ -16,10 +16,8 @@
     <tbody>
       {% for user in users %}
         <tr>
-          <td>{{ user.user_name }}</td>
-            <td id="teste">{{ user.pw_cliente }}</td>
-            
-          
+          <td>{{ user.username }}</td>
+          <td>{{ user.password }}</td>
           <td>{{ user.id_cliente }}</td>
           <td>
               <a href="edit/{{ user.id }}">Editar</a> |
