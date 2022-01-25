@@ -8,4 +8,6 @@ services:
     ports:
       - 5000:5000
     volumes:
-      - "/db_clientes_mentorstec.sqlite"
+      - dados-do-banco:/app/db
+volumes:
+  dados-do-banco:

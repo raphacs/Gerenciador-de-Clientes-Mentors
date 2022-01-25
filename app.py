@@ -8,9 +8,8 @@ import cryptocode
 
 senha_padrao = 'opa'
 
-
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db_clientes_mentorstec.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/db_clientes_mentorstec.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
